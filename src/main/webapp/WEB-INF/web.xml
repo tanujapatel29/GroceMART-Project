@@ -3,6 +3,18 @@
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
    version="6.0">
+    
+     <!-- Define the AuthenticationFilter -->
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.mycompany.security.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <!-- Specify URL patterns to intercept -->
+        <url-pattern>/admin/admindash.html</url-pattern>
+    </filter-mapping>
+    
     <session-config>
         <session-timeout>
             30
