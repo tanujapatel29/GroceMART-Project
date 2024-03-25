@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/grocemart</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">tanuja</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="hibernate.connection.pool_size">1</property>
+
+        <!-- SQL dialect for your database -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Drop and create the database schema at startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+         <mapping class="com.mycompany.grocemart.model.User"/>
+          <mapping class="com.mycompany.grocemart.model.Role"/>
+           <mapping class="com.mycompany.grocemart.model.Product"/>
+            <mapping class="com.mycompany.grocemart.model.Category"/>
+
+       <!-- <mapping package="com.mycompany.grocemart.model"/> -->
+
+    </session-factory>
+</hibernate-configuration>
+
+
